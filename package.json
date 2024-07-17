@@ -1,0 +1,23 @@
+{
+  "name": "spirii",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "start": "turbo run start",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "dependencies": {
+    "zod": "^3.23.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.8",
+    "turbo": "latest",
+    "typescript": "^5.4.5"
+  },
+  "pnpm": {
+    "version": "9.*"
+  },
+  "packageManager": "pnpm@9.1.0"
+}

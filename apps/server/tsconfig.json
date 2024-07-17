@@ -1,0 +1,11 @@
+{
+    "extends": "./tsconfig.node.json",
+    "compilerOptions": {
+        "outDir": "dist"
+    },
+    "include": ["."],
+    "exclude": ["dist", "build"],
+    "ts-node": {
+        "swc": true
+    }
+}
