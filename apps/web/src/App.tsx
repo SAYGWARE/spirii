@@ -5,6 +5,8 @@ import { httpBatchLink } from "@trpc/client";
 import superjson from "superjson";
 import { HelmetProvider } from "react-helmet-async";
 import { Router } from "./router";
+import { store } from "./store";
+import { Provider } from "react-redux";
 
 export const App = () => {
     const [queryClient] = useState(() => new QueryClient());
@@ -23,7 +25,9 @@ export const App = () => {
         <HelmetProvider>
             <trpc.Provider queryClient={queryClient} client={trpcClient}>
                 <QueryClientProvider client={queryClient}>
-                    <Router />
+                    <Provider store={store}>
+                        <Router />
+                    </Provider>
                 </QueryClientProvider>
             </trpc.Provider>
         </HelmetProvider>
